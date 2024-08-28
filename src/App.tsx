@@ -1,9 +1,10 @@
 import "./App.css";
-import { TopUrlsPage } from "./presentation/pages/TopUrlsPage";
+import { ShortenUrlPage } from "./presentation/pages/ShortenUrlPage";
+
 function App() {
   return (
     <div>
-      <TopUrlsPage />
+      <ShortenUrlPage />
     </div>
   );
 }

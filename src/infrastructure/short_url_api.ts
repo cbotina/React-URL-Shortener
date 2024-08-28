@@ -8,6 +8,13 @@ class ShortUrlRepository {
 
     return urls;
   };
+
+  createShortUrl = async (fullUrl: string): Promise<ShortUrl> => {
+    const res = await apiClient.post("/short_urls", { full_url: fullUrl });
+    const createdUrl: ShortUrl = res.data;
+
+    return createdUrl;
+  };
 }
 
 const repository = new ShortUrlRepository();
