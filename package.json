@@ -2,7 +2,9 @@
   "name": "ltv-url-shortener",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3000",
   "dependencies": {
+    "@tanstack/react-query": "^5.52.2",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,6 +12,7 @@
     "@types/node": "^16.18.106",
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",
+    "axios": "^1.7.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -17,7 +20,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env PORT=3003 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -39,5 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^5.52.0",
+    "cross-env": "^7.0.3"
   }
 }
