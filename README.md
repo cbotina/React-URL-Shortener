@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+# ShortRUL
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A URL shortener application built with React and TypeScript and implementing Clean Architecture. It allows users to shorten URLs and view the top 100 most frequently accessed URLs. The application interacts with a backend API for URL shortening and retrieval.
 
-## Available Scripts
+This project is the second part of the LTV technical challenge for the Junior FullStack Engineer role. The [First Part](https://github.com/LTVCoHiring/cbotina-jr-fs-challenge/tree/develop) (Ruby on Rails Backend) is required to run this project.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Shorten URLs
+- View the top 100 most frequently accessed URLs
+- Responsive design with Tailwind CSS
+- Copy-to-clipboard functionality for shortened URLs
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To get started with this project, follow these steps:
 
-### `npm test`
+### 1. Clone the Repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone <repository-url>
+cd <repository-folder>
+```
 
-### `npm run build`
+### 2. Install dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ensure you have Node.js installed. Then, run the following command to install the project dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. Set Up Environment Variables
 
-### `npm run eject`
+Create a `.env` file in the root of your project directory and add the following environment variable:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```env
+REACT_APP_API_BASE_URL=http://localhost:3000
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `REACT_APP_API_BASE_URL`: The base URL for the backend API. Adjust this URL if your backend is running on a different port or host.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 4. Port Configuration
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The React app is configured to run on port 3003 to avoid conflicts with the backend server running on port 3000. This is handled by the proxy field in the package.json file.
 
-## Learn More
+### 5. Start the Development Server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Run the following command to start the development server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run start
+```
+
+The application will be available at http://localhost:3003.
